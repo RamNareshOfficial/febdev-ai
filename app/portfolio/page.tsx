@@ -117,13 +117,13 @@ export default function Home() {
               Hire Me
             </a>
             <a
-              href="#contact"
+              href="/login"
               className="rounded-full border border-emerald-300/40 px-4 py-2 text-sm font-medium text-emerald-100 transition hover:border-emerald-200 hover:bg-emerald-300/10"
             >
               Log In
             </a>
             <a
-              href="#contact"
+              href="/signup"
               className="rounded-full border border-rose-300/40 px-4 py-2 text-sm font-medium text-rose-100 transition hover:border-rose-200 hover:bg-rose-300/10"
             >
               Sign Up
