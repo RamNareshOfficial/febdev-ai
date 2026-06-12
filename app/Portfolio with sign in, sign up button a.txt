@@ -1,0 +1,31 @@
+Portfolio with sign in, sign up button and page-------------------->
+
+line bar loading of pages using <Link> everywhere ----------------->
+
+Authentication and authorization ---------------------------------->
+
+Validation on both client and server ------------------------------>
+
+Pagination -------------------------------------------------------->
+filtering --------------------------------------------------------->
+search ------------------------------------------------------------>
+lazy-loading ------------------------------------------------------>
+skelaton loading effect ------------------------------------------->
+
+
+Optimistic updates where it makes sense --------------------------->
+
+Error boundaries and loading states ------------------------------->
+
+Responsive UI with Tailwind CSS ----------------------------------->
+
+Structured backend APIs in Node.js -------------------------------->
+
+Logging, rate limiting, and security headers ---------------------->
+
+File uploads or notifications if relevant ------------------------->
+
+Reports daily, weekly, monthly ------------------------------------>
+
+pdf, excel data download when it is relevant ---------------------->
+

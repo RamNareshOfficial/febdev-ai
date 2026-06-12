@@ -9,7 +9,7 @@ import { StatsCard } from "@/components/dashboard/stats-card";
 import { ProductivityChart } from "@/components/dashboard/productivity-chart";
 import { RecentTasks } from "@/components/dashboard/recent-tasks";
 
-export default function DashboardPage() {
+export default async function DashboardPage() {
   return (
     <div className="space-y-6">
       <div>
