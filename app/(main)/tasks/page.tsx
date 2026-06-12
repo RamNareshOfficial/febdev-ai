@@ -2,7 +2,7 @@
 
 import { useTasks } from "@/hooks/use-tasks";
 
-export default function TasksPage() {
+export default async function TasksPage() {
   const {
     data: tasks,
     isLoading,
