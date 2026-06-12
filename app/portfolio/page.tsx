@@ -109,12 +109,26 @@ export default function Home() {
               </a>
             ))}
           </div>
-          <a
-            href="#contact"
-            className="rounded-full border border-cyan-300/40 px-4 py-2 text-sm font-medium text-cyan-100 transition hover:border-cyan-200 hover:bg-cyan-300/10"
-          >
-            Hire Me
-          </a>
+          <div className="flex gap-2">
+            <a
+              href="#contact"
+              className="rounded-full border border-cyan-300/40 px-4 py-2 text-sm font-medium text-cyan-100 transition hover:border-cyan-200 hover:bg-cyan-300/10"
+            >
+              Hire Me
+            </a>
+            <a
+              href="/login"
+              className="rounded-full border border-emerald-300/40 px-4 py-2 text-sm font-medium text-emerald-100 transition hover:border-emerald-200 hover:bg-emerald-300/10"
+            >
+              Log In
+            </a>
+            <a
+              href="/signup"
+              className="rounded-full border border-rose-300/40 px-4 py-2 text-sm font-medium text-rose-100 transition hover:border-rose-200 hover:bg-rose-300/10"
+            >
+              Sign Up
+            </a>
+          </div>
         </nav>
       </header>
       <section id="home" className="mx-auto grid min-h-[calc(100vh-73px)] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.05fr_0.95fr]">

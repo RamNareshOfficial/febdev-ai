@@ -1,8 +1,12 @@
 import {
+  CalendarDays,
+  ChartNoAxesCombined,
+  FolderKanban,
   LayoutDashboard,
-  CheckSquare,
-  BarChart3,
+  ListTodo,
+  MessagesSquare,
   Settings,
+  Target,
 } from "lucide-react";
 
 export const navigation = [
@@ -12,14 +16,34 @@ export const navigation = [
     icon: LayoutDashboard,
   },
   {
-    title: "Tasks",
-    href: "/tasks",
-    icon: CheckSquare,
+    title: "Projects",
+    href: "/portfolio",
+    icon: FolderKanban,
   },
   {
-    title: "Analytics",
-    href: "/analytics",
-    icon: BarChart3,
+    title: "Tasks",
+    href: "/tasks",
+    icon: ListTodo,
+  },
+  {
+    title: "Leads",
+    href: "/leads",
+    icon: Target,
+  },
+  {
+    title: "WhatsApp",
+    href: "/whatsapp",
+    icon: MessagesSquare,
+  },
+  {
+    title: "Calendar",
+    href: "/calendar",
+    icon: CalendarDays,
+  },
+  {
+    title: "Reports",
+    href: "/reports",
+    icon: ChartNoAxesCombined,
   },
   {
     title: "Settings",
