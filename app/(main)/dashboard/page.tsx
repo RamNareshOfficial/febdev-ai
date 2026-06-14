@@ -31,13 +31,6 @@ const activity = [
 export default function DashboardPage() {
   return (
     <div className="min-h-[calc(100vh-6rem)] space-y-5">
-      <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-        <div>
-          <h1 className="text-3xl font-semibold tracking-tight text-white">Dashboard</h1>
-          <p className="mt-1 text-sm text-slate-400">Performance overview for active project delivery.</p>
-        </div>
-      </div>
-
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         {stats.map((item) => {
           const Icon = item.icon;

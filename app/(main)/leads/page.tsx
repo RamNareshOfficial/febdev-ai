@@ -58,17 +58,6 @@ export default function LeadsPage() {
 
   return (
     <div className="min-h-[calc(100vh-6rem)] space-y-5">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <div>
-          <h1 className="text-3xl font-semibold text-white">Leads</h1>
-          <p className="mt-1 text-sm text-slate-400">Track pipeline quality from first touch to conversion.</p>
-        </div>
-        <button onClick={() => setShowForm((value) => !value)} className="inline-flex h-10 items-center justify-center gap-2 rounded-md bg-blue-600 px-4 text-sm font-semibold text-white transition hover:bg-blue-500">
-          <Plus size={16} />
-          Add Lead
-        </button>
-      </div>
-
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         {[
           ["Total Leads", "89", "+8%"],
@@ -119,6 +108,10 @@ export default function LeadsPage() {
             <button className="inline-flex h-10 items-center gap-2 rounded-md border border-white/10 bg-white/5 px-3 text-sm text-slate-300">
               <Filter size={15} />
               Filters
+            </button>
+            <button onClick={() => setShowForm((value) => !value)} className="inline-flex h-10 items-center justify-center gap-2 rounded-md bg-blue-600 px-4 text-sm font-semibold text-white transition hover:bg-blue-500">
+              <Plus size={16} />
+              Add Lead
             </button>
           </div>
         </div>

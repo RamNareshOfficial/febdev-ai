@@ -10,14 +10,15 @@ export function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="hidden h-screen w-56 shrink-0 flex-col border-r border-white/10 bg-[#0b1524]/95 text-slate-200 backdrop-blur md:flex">
-      <div className="flex items-center gap-3 px-5 py-6">
-        <div className="grid h-10 w-10 place-items-center rounded-full border border-cyan-300/40 bg-cyan-400/10 text-sm font-bold text-white">
-          RN
-        </div>
-        <div>
-          <p className="text-sm font-semibold text-white">Ram Naresh</p>
-          <p className="text-xs text-slate-500">Workspace</p>
+    <aside className="fixed inset-y-0 left-0 z-40 hidden h-screen w-56 shrink-0 flex-col border-r border-white/10 bg-[#0b1524]/95 text-slate-200 backdrop-blur md:flex">
+      <div className="px-4 py-5">
+        <div className="moving-gradient-border rounded-lg p-px">
+          <div className="rounded-[7px] bg-[#0b1524] px-4 py-3">
+            <p className="text-base font-semibold tracking-wide text-white">
+              FebDev-AI
+            </p>
+            <p className="text-xs text-slate-500">Personal Workspace</p>
+          </div>
         </div>
       </div>
 

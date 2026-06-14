@@ -1,4 +1,4 @@
-Portfolio with sign in, sign up button and page-------------------->
+Portfolio with sign in, sign up button and page--------------------> Done
 
 line bar loading of pages using <Link> everywhere ----------------->
 
