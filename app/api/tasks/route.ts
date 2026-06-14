@@ -1,33 +1,38 @@
 import { NextResponse } from "next/server";
-
-let tasks = [
-  {
-    id: "1",
-    title: "Build SaaS dashboard",
-    description: "Create analytics UI",
-    priority: "high",
-    status: "completed",
-    createdAt: new Date().toISOString(),
-  },
-];
+import { connectDb } from "@/lib/mongodb";
+import { Task } from "@/models/task.model";
 
 export async function GET() {
-  return NextResponse.json(tasks);
+  try {
+    await connectDb();
+    const tasks = await Task.find().sort({ createdAt: -1 });
+    return NextResponse.json(tasks);
+  } catch (error) {
+    return NextResponse.json(
+      { message: "Failed to fetch Tasks." },
+      { status: 500 }
+    )
+  }
 }
 
-export async function POST(request: Request) {
-  const body = await request.json();
+export async function POST(req: Request) {
+  try {
+    await connectDb();
+    const reqData = await req.json();
+    const task = await Task.create({
+      title: reqData.title,
+      description: reqData.description,
+      duration: reqData.duration,
+      isRepeatable: reqData.isRepeatable,
+      priority: reqData.priority,
+    });
+    return NextResponse.json(task);
 
-  const newTask = {
-    id: crypto.randomUUID(),
-    title: body.title,
-    description: body.description,
-    priority: body.priority,
-    status: "todo",
-    createdAt: new Date().toISOString(),
-  };
+  } catch (error) {
+    return NextResponse.json(
+      { message: "Failed to add task." },
+      { status: 500 }
+    )
 
-  tasks = [newTask, ...tasks];
-
-  return NextResponse.json(newTask);
+  }
 }
