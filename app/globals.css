@@ -91,6 +91,13 @@ body {
   animation: dotPulseCss 1.6s ease-out infinite;
 }
 
+.moving-gradient-border {
+  background: linear-gradient(90deg, #4285f4, #34a853, #fbbc05, #ea4335, #4285f4);
+  background-size: 220% 100%;
+  animation: gradient-slide 2.4s linear infinite;
+  box-shadow: 0 0 22px rgba(66, 133, 244, 0.16);
+}
+
 @media (min-width: 640px) {
   .section-shell {
     padding-inline: 2rem;
@@ -112,6 +119,10 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .dotPulseCss {
     transition: none;
+    animation: none;
+  }
+
+  .moving-gradient-border {
     animation: none;
   }
 }
@@ -161,5 +172,15 @@ body {
 
   100% {
     box-shadow: 0 0 0 0 rgba(110, 231, 183, 0);
+  }
+}
+
+@keyframes gradient-slide {
+  from {
+    background-position: 220% 0;
+  }
+
+  to {
+    background-position: 0 0;
   }
 }

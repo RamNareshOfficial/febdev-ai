@@ -2,13 +2,23 @@
 
 import { Bell, MessageCircle, Search } from "lucide-react";
 import { MobileSidebar } from "./mobile-sidebar";
+import { usePathname } from "next/navigation";
+import { navigation } from "@/lib/navigation";
+
+
 
 export function Header() {
+  const pathname = usePathname();
+  const pageName = navigation.find((item) => pathname === item.href);
+
   return (
     <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b border-white/10 bg-[#08111f]/85 px-4 backdrop-blur md:px-6">
       <div className="flex items-center gap-3">
         <MobileSidebar />
-        {/* <h1 className="text-lg font-semibold text-white">Dashboard</h1> */}
+        <div className="flex-col">
+          <h1 className="text-lg font-semibold text-white">{pageName?.title}</h1>
+          <p className="text-xs text-slate-400">{pageName?.subTitle}</p>
+        </div>
       </div>
 
       <div className="hidden w-full max-w-sm items-center gap-2 rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-500 lg:flex">

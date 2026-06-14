@@ -84,17 +84,6 @@ export default function TasksPage() {
 
   return (
     <div className="min-h-[calc(100vh-6rem)] space-y-5">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <div>
-          <h1 className="text-3xl font-semibold text-white">Tasks</h1>
-          <p className="mt-1 text-sm text-slate-400">Plan, prioritize, and ship project work.</p>
-        </div>
-        <button onClick={() => setShowForm((value) => !value)} className="inline-flex h-10 items-center justify-center gap-2 rounded-md bg-blue-600 px-4 text-sm font-semibold text-white transition hover:bg-blue-500">
-          <Plus size={16} />
-          New Task
-        </button>
-      </div>
-
       {showForm && (
         <form onSubmit={handleSubmit} className="grid gap-3 rounded-lg border border-white/10 bg-[#0d1828]/90 p-4 lg:grid-cols-[1fr_1fr_160px_auto]">
           <input name="title" required placeholder="Task title" className="h-10 rounded-md border border-white/10 bg-white/5 px-3 text-sm outline-none placeholder:text-slate-500 focus:border-cyan-300/60" />
@@ -127,6 +116,10 @@ export default function TasksPage() {
             <button className="inline-flex h-10 items-center gap-2 rounded-md border border-white/10 bg-white/5 px-3 text-sm text-slate-300">
               <Filter size={15} />
               Filters
+            </button>
+            <button onClick={() => setShowForm((value) => !value)} className="inline-flex h-10 items-center justify-center gap-2 rounded-md bg-blue-600 px-4 text-sm font-semibold text-white transition hover:bg-blue-500">
+              <Plus size={16} />
+              New Task
             </button>
           </div>
         </div>
