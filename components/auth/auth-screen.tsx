@@ -20,7 +20,7 @@ const copy = {
   login: {
     title: "Login to your account",
     subtitle: "Enter your credentials to continue",
-    welcome: "Welcome back,",
+    welcome: "Welcome back at,",
     note: "Glad to see you again!",
     button: "Login",
     footer: "Don't have an account?",
@@ -59,13 +59,13 @@ export function AuthScreen({ mode }: { mode: AuthMode }) {
         <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
           <div className="grid h-32 w-32 place-items-center rounded-full border border-cyan-300/30 bg-gradient-to-br from-cyan-500/20 to-fuchsia-500/20 p-2 shadow-[0_0_70px_rgba(34,211,238,0.16)]">
             <div className="grid h-full w-full place-items-center rounded-full border border-white/10 bg-[#0b1930] text-4xl font-bold">
-              RN
+              FD
             </div>
           </div>
           <p className="mt-8 text-lg text-slate-300">{c.welcome}</p>
-          <h1 className="mt-2 text-4xl font-semibold tracking-tight">Ram Naresh</h1>
+          <h1 className="mt-2 text-4xl font-semibold tracking-tight">FebDev-AI</h1>
           <p className="mt-5 max-w-xs text-sm leading-6 text-slate-400">{c.note}</p>
-          <p className="mt-20 hidden text-xs text-slate-600 lg:block">© 2026 Ram Naresh. All rights reserved.</p>
+          <p className="mt-20 hidden text-xs text-slate-600 lg:block">© 2026 FebDev-AI. All rights reserved.</p>
         </div>
 
         <form
@@ -95,10 +95,20 @@ export function AuthScreen({ mode }: { mode: AuthMode }) {
             )}
 
             {isSignup && (
-              <label className="block space-y-2">
-                <span className="text-sm text-slate-300">Full name</span>
-                <input name="name" required placeholder="Ram Naresh" className="h-12 w-full rounded-md border border-white/10 bg-white/[0.04] px-4 text-sm outline-none transition placeholder:text-slate-500 focus:border-cyan-300/60" />
-              </label>
+              <>
+                <label className="block space-y-2">
+                  <span className="text-sm text-slate-300">Full name</span>
+                  <input name="name" required placeholder="Ram Naresh" className="h-12 w-full rounded-md border border-white/10 bg-white/[0.04] px-4 text-sm outline-none transition placeholder:text-slate-500 focus:border-cyan-300/60" />
+                </label>
+                <label className="block space-y-2">
+                  <span className="text-sm text-slate-300">Phone Number</span>
+                  <input name="name" required placeholder="Phone Number" className="h-12 w-full rounded-md border border-white/10 bg-white/[0.04] px-4 text-sm outline-none transition placeholder:text-slate-500 focus:border-cyan-300/60" />
+                </label>
+                <label className="block space-y-2">
+                  <span className="text-sm text-slate-300">OTP</span>
+                  <input name="name" required placeholder="OTP" className="h-12 w-full rounded-md border border-white/10 bg-white/[0.04] px-4 text-sm outline-none transition placeholder:text-slate-500 focus:border-cyan-300/60" />
+                </label>
+              </>
             )}
 
             <label className="block space-y-2">

@@ -88,6 +88,11 @@ export default function TasksPage() {
         <form onSubmit={handleSubmit} className="grid gap-3 rounded-lg border border-white/10 bg-[#0d1828]/90 p-4 lg:grid-cols-[1fr_1fr_160px_auto]">
           <input name="title" required placeholder="Task title" className="h-10 rounded-md border border-white/10 bg-white/5 px-3 text-sm outline-none placeholder:text-slate-500 focus:border-cyan-300/60" />
           <input name="description" required placeholder="Description" className="h-10 rounded-md border border-white/10 bg-white/5 px-3 text-sm outline-none placeholder:text-slate-500 focus:border-cyan-300/60" />
+          <input name="duration" required placeholder="duration" className="h-10 rounded-md border border-white/10 bg-white/5 px-3 text-sm outline-none placeholder:text-slate-500 focus:border-cyan-300/60" />
+          <label>
+            Is Repeatable?
+            <input type="radio" required name="isRepeatable" id="isRepeatable" />
+          </label>
           <select name="priority" className="h-10 rounded-md border border-white/10 bg-[#111c2d] px-3 text-sm outline-none">
             <option value="high">High</option>
             <option value="medium">Medium</option>
